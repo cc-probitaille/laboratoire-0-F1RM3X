@@ -1,1 +1,15 @@
-// Vous devez complétéer ce fichier
+@startuml DSS pour le scénario Redémarrer
+skinparam Style strictuml
+
+
+title RDCU pour redémarrerJeu
+
+participant ":JeuDeDes" as jeu
+
+participant "joueurs:\n Map<String, Joueur>" as joueurs
+
+ -> jeu : redemarrerJeu()
+ note right: selon Contrôleur\n (JeuDeDés est\n l'objet racine)
+ jeu -> joueurs: Map<String,Joueur> : clear()
+ note right: selon Expert
+@enduml

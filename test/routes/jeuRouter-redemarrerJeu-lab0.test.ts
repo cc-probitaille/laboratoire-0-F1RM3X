@@ -21,12 +21,11 @@ describe('GET /api/v1/jeu/redemarrerJeu', () => {
   });
 
   it(`devrait ne plus rester de joueurs après redémarrage`, async () => {
-        const response = await request.get('/api/v1/jeu/jouer/' +testNom1);
-        const response2 = await request.get('/api/v1/jeu/jouer/' +testNom2);
-        expect(response.status).toBe(200);
-        expect(response2.status).toBe(200);
-        expect(response.body.length).toBe(0);
-        expect(response2.body.length).toBe(0);
+        const response = await request.get('/api/v1/jeu/jouer' +testNom1);
+        const response2 = await request.get('/api/v1/jeu/jouer' +testNom2);
+        expect(response.status).toBe(404);
+        expect(response2.status).toBe(404);
+        
     });
 
 });

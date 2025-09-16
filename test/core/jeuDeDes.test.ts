@@ -22,8 +22,8 @@ describe('JeuDeDesTest', () => {
     for (let i = 0; i < 2000; i++) {
       resultats.add(jdd.brasser())
     }
-    expect(resultats.size).toBe(11);
-    for (let i = 1; i < 18; i++) {
+    expect(resultats.size).toBe(16);
+    for (let i = 2; i < 18; i++) {
       expect(resultats.has(i + 1)).toBeTrue();
     }
     // cas particuliers

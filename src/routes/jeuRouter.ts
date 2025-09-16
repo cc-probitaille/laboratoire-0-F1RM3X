@@ -107,7 +107,7 @@ export class JeuRouter {
   }
 
 
-  public redemarrerJeu(req: Request, res: Response, next: NextFunction){
+  public redemarrerJeu(req: Request, res: Response, next: NextFunction) {
     const resultat = this._controleurJeu.redemarrerJeu();
     req.flash('info', `Jeu redémarré`);
     res.status(200)
@@ -116,6 +116,7 @@ export class JeuRouter {
           status: res.status,
           resultat
         });
+    this._controleurJeu.redemarrerJeu();
   }
 
 

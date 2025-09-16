@@ -78,7 +78,7 @@ export class JeuDeDes {
         this._d3.brasser();
         const v1 = this._d1.valeur;
         const v2 = this._d2.valeur;
-        const v3 = this._d2.valeur;
+        const v3 = this._d3.valeur;
         const somme = v1 + v2 + v3;
         return somme;
     }
@@ -87,7 +87,7 @@ export class JeuDeDes {
         return JSON.stringify(Array.from(this._joueurs.values()));
     }
 
-    public redemarrerJeu(){
+    public redemarrerJeu() {
         this._joueurs.clear();
     }
 

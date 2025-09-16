@@ -28,4 +28,9 @@ describe('GET /api/v1/jeu/redemarrerJeu', () => {
         
     });
 
+    it("devrait retourner 404 si on essaie de jouer après redémarrage", async () => {
+        const response = await request.get(`/api/v1/jeu/jouer/${testNom1}`);
+        expect(response.status).toBe(404);
+      });
+
 });
